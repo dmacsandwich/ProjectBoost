@@ -7,6 +7,7 @@ public class MovePlayer : MonoBehaviour
 {   
     [SerializeField] float rotationThrust = 1f;
     [SerializeField] float mainThrust = 15;
+    [SerializeField] AudioClip mainEngine;
     Rigidbody rb;
     AudioSource rocketThrustAudio;
 
@@ -64,7 +65,7 @@ public class MovePlayer : MonoBehaviour
         {   
             if(!rocketThrustAudio.isPlaying)
             {
-                rocketThrustAudio.Play();
+                rocketThrustAudio.PlayOneShot(mainEngine);
             }
         }
         else
