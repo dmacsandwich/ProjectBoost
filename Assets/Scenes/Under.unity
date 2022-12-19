@@ -356,6 +356,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Landing Pad
       objectReference: {fileID: 0}
+    - target: {fileID: 7386128642161112026, guid: d643a9aaf84b2f841bc8b2b53d33a86f, type: 3}
+      propertyPath: m_TagString
+      value: Finish
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d643a9aaf84b2f841bc8b2b53d33a86f, type: 3}
 --- !u!1001 &387163980681052165
@@ -413,12 +417,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 387163980681052167, guid: 32859c7a7f913fc4ea6cfa1041b36057, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 32859c7a7f913fc4ea6cfa1041b36057, type: 3}
+--- !u!1 &387163980681052166 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 387163979770125683, guid: 32859c7a7f913fc4ea6cfa1041b36057, type: 3}
+  m_PrefabInstance: {fileID: 387163980681052165}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &387163980681052174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387163980681052166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e21300fec135b624ea019032a4e6e4c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &4456984288774114014
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -531,6 +548,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Launch Pad (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7386128642161112026, guid: d643a9aaf84b2f841bc8b2b53d33a86f, type: 3}
+      propertyPath: m_TagString
+      value: Friendly
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d643a9aaf84b2f841bc8b2b53d33a86f, type: 3}
 --- !u!1001 &6031243290113306973
@@ -554,7 +575,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7358778131566251932, guid: c5512f8171d2aa84183e1d19b0032059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3
+      value: 8.71
       objectReference: {fileID: 0}
     - target: {fileID: 7358778131566251932, guid: c5512f8171d2aa84183e1d19b0032059, type: 3}
       propertyPath: m_LocalPosition.z
