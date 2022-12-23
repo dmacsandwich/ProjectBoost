@@ -7,6 +7,7 @@ public class CollisionHandler : MonoBehaviour
 
     AudioSource audioSource;
     float delay = 1f;
+    bool isTransitioning = false;
 
     void Start ()
     {
@@ -14,11 +15,14 @@ public class CollisionHandler : MonoBehaviour
     }
     void OnCollisionEnter(Collision other) 
         {
+            if (isTransitioning)
+            {
+                return;
+            }
+
             switch(other.gameObject.tag)
             {
-                
                 case "Friendly":
-                    
                     break;
                 case "Finish":
                     StartLoadSequence();
@@ -31,12 +35,17 @@ public class CollisionHandler : MonoBehaviour
 
     void StartLoadSequence()
     {
+        audioSource.Stop();
+        isTransitioning = true;
         audioSource.PlayOneShot(success);
         GetComponent<MovePlayer>().enabled = false;
         Invoke("LoadNextLevel", delay);
     }
+
     void StartCrashSequence()
     {
+        isTransitioning = true;
+        audioSource.Stop();
         audioSource.PlayOneShot(crash);
         GetComponent<MovePlayer>().enabled = false;
         Invoke("ReloadLevel", delay);
